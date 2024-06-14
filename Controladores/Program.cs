@@ -52,6 +52,7 @@ namespace irodhan.Controladores
                         case 1:
                             Console.WriteLine("[INFO] - Ha sido seleccionada la opcion 1 (Numero de vehiculos historicos)");
                             fI.escribirFicheroLog("[INFO] - Ha sido seleccionada la opcion 1 (Numero de vehiculos historicos)");
+                            oI.numeroHistoricos();
                             break; 
                         case 2:
                             Console.WriteLine("[INFO] - Ha sido seleccionada la opcion 2 (Dar de alta a un nuevo propietario)");

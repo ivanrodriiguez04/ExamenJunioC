@@ -17,5 +17,11 @@ namespace irodhan.Servicios
         /// irodhan -> 14/06/2024
         /// </summary>
         public void darAltaPropietario();
+
+        /// <summary>
+        /// Metodo que comprueba cuantos coches historicos hay
+        /// irodhan -> 14/06/2024
+        /// </summary>
+        public void numerosHistoricos();
     }
 }

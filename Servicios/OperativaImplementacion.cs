@@ -19,8 +19,14 @@ namespace irodhan.Servicios
             Controladores.Program.listaPropietarios.Add(propietario);
         }
 
+        public void numerosHistoricos()
+        {
+            VehiculoDto vehiculo = new VehiculoDto();
+            PropietarioDto propietario;
+        }
+
         /// <summary>
-        /// Metodo que asigna el id al nuevo propietario y comprueba el dni
+        /// Metodo que asigna el id al nuevo propietario y comprueba la longitud del dni
         /// irodhan -> 14/06/2024
         /// </summary>
         /// <returns>Devuelve un nuevo propietario</returns>
@@ -28,16 +34,16 @@ namespace irodhan.Servicios
         {
             //Variables
             bool aux=false;
-            string dni = "aaaaa";
+            string dni;
             int comprobacion = 0;
-            
-            while (comprobacion == 9) 
+            long id;
+            Console.WriteLine("Introduce tu dni: ");
+            dni = Console.ReadLine(); 
+            comprobacion = dni.Length;
+            if (comprobacion == 9) 
             {
-                Console.WriteLine("Introduce tu dni: ");
-                dni = Console.ReadLine();
-                comprobacion = dni.Length;
+               id = Utils.Utilidades.asignarId();
             }
-            long id = Utils.Utilidades.asignarId();
             PropietarioDto  p =new PropietarioDto(id,dni);
 
             Console.WriteLine(p.ToString());
